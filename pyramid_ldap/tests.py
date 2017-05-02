@@ -19,7 +19,7 @@ class Test_includeme(unittest.TestCase):
         self._callFUT(config)
         self.assertEqual(config.directives,
                          ['ldap_setup', 'ldap_set_login_query',
-                          'ldap_set_groups_query'])
+                          'ldap_set_groups_query', 'ldap_set_dn_query'])
         
 
 class Test__ldap_decode(unittest.TestCase):
@@ -296,3 +296,5 @@ class DummyConnection(object):
         self.arg = arg
         return self.result
     
+
+unittest.main()
